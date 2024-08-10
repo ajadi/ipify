@@ -1,0 +1,10 @@
+services:
+  ip_service:
+    build: .
+    ports:
+      - "127.0.0.1:10000:10000"
+    environment:
+      - LIMITS_MINUTE=60
+      - LIMITS_HOUR=1000
+      - LIMITS_DAY=5000
+    container_name: ip_service_container
